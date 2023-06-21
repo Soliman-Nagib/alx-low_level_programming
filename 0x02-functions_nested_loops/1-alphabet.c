@@ -3,18 +3,14 @@
 * comment
 * comment 2
 */
-int main(void)
+void print_alphabet(void)
 {
-	void print_alphabet(void)
+
+	char i;
+
+	for (i = 'a'; i <= 'z'; i++)
 	{
-	
-		char i;
-	
-		for (i = 'a'; i <= 'z'; i++)
-		{
-			_putchar(i);
-		}
-		_putchar('\n');
+		_putchar(i);
 	}
-	return (0);
+	_putchar('\n');
 }
