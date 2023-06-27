@@ -7,7 +7,8 @@
 
 char* generate_password() {
     char* password = malloc((PASSWORD_LENGTH + 1) * sizeof(char));
-    
+
+    // Characters to use in the password
     const char* characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     int i;
@@ -21,12 +22,12 @@ char* generate_password() {
 }
 
 int main() {
-    srand(time(NULL)); // Seed the random number generator with current time
+    srand(time(NULL)); /* Seed the random number generator with current time */
 
-    char * password = generate_password();
+    char* password;
+    password = generate_password();
     printf("Generated Password: %s\n", password);
     free(password);
 
     return 0;
 }
-
