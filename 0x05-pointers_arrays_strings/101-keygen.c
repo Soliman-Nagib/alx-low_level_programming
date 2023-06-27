@@ -3,7 +3,7 @@
 #include <time.h>
 #include <string.h>
 
-#define PASSWORD_LENGTH 10
+#define PASSWORD_LENGTH 15
 
 char* generate_password() {
     char* password = malloc((PASSWORD_LENGTH + 1) * sizeof(char));
@@ -27,6 +27,13 @@ int main() {
 
     password = generate_password();
     printf("Generated Password: %s\n", password);
+
+    if (strcmp(password, "Tada! Congrats") == 0) {
+        printf("Correct password!\n");
+    } else {
+        printf("Wrong password\n");
+    }
+
     free(password);
 
     return 0;
