@@ -22,9 +22,9 @@ char* generate_password() {
 }
 
 int main() {
+    char* password;
     srand(time(NULL)); /* Seed the random number generator with current time */
 
-    char* password;
     password = generate_password();
     printf("Generated Password: %s\n", password);
     free(password);
