@@ -8,7 +8,7 @@
 char* generate_password() {
     char* password = malloc((PASSWORD_LENGTH + 1) * sizeof(char));
 
-    // Characters to use in the password
+    /* Characters to use in the password */
     const char* characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     int i;
