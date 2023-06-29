@@ -1,3 +1,14 @@
+#include<stdio.h>
+
+/**
+ * _memset - fills memory with a constant byte
+ * @s: pointer to memory
+ * @b: constant byte used to replace
+ * @n: number of  bytes to replace
+ * Description: fills memory s with byte b for n bytes
+ * Return: pointer to memory
+ **/
+
 char *_strcat(char *dest, char *src)
 {
   int i, j;
