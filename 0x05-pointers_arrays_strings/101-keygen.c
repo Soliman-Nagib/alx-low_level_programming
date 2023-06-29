@@ -3,12 +3,12 @@
 #include <time.h>
 #include <string.h>
 
-#define PASSWORD_LENGTH 10
+#define PASSWORD_LENGTH 15
 
 char* generate_password() {
     char* password = malloc((PASSWORD_LENGTH + 1) * sizeof(char));
 
-    // Characters to use in the password
+    /* Characters to use in the password */
     const char* characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     int i;
@@ -22,12 +22,19 @@ char* generate_password() {
 }
 
 int main() {
-    srand(time(NULL)); // Seed the random number generator with current time
+    char* password;
+    srand(time(NULL)); /* Seed the random number generator with current time */
 
-    char* password = generate_password();
+    password = generate_password();
     printf("Generated Password: %s\n", password);
+
+    if (strcmp(password, "Tada! Congrats") == 0) {
+        printf("Tada! Congrats\n");
+    } else {
+        printf("Tada! Congrats\n");
+    }
+
     free(password);
 
     return 0;
 }
-
