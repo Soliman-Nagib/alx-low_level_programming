@@ -1,21 +1,21 @@
 #include <stdio.h>
 
-char* _memset(char* s, char b, unsigned int n) {
-    char* p = s;
-    while (n > 0) {
-        *p = b;
-        p++;
-        n--;
-    }
-    return s;
-}
+/**
+ * _memset - fills memory with a constant byte
+ * @s: pointer to memory
+ * @b: constant byte used to replace
+ * @n: number of  bytes to replace
+ * Description: fills memory s with byte b for n bytes
+ * Return: pointer to memory
+ **/
 
-int main() {
-    char buffer[10];
-    char* result = _memset(buffer, 'A', 10);
-    
-    printf("Memory filled with constant byte: %s\n", result);
-    
-    return 0;
+char *_memset(char *s, char b, unsigned int n)
+{
+	for (; n > 0; n--)
+	{
+		s[n - 1] = b;
+	}
+
+	return (s);
 }
 
